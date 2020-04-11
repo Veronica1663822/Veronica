@@ -1,0 +1,9 @@
+racc = set()
+number_of_stamps = int(input())
+
+for _ in range(0, number_of_stamps):
+    stamp = input()
+    if stamp not in racc:
+        racc.add(stamp)
+
+print(len(racc))

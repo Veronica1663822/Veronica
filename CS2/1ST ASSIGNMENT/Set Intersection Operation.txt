@@ -1,0 +1,5 @@
+_ = input()
+eng = set(input().split())
+_ = input()
+fr = input().split()
+print(len(eng.intersection(fr)))

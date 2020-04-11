@@ -1,0 +1,8 @@
+sA = set(map(int, input().split()))
+for i in range(int(input())):
+    s = set(map(int, input().split()))
+    if not sA.issuperset(s):
+        print("False")
+        break
+else:
+    print("True")

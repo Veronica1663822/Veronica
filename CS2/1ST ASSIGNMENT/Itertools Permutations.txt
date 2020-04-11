@@ -1,0 +1,6 @@
+import itertools
+
+string, length = input().split()
+list_ = list(itertools.permutations(string, int(length)))
+for item in sorted(list_):
+    print("".join(item))

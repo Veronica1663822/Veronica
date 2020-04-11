@@ -1,0 +1,11 @@
+import collections
+
+_ = input()
+catalogue = collections.Counter(input().split())
+wallet = 0
+for client in range(int(input())):
+    size, money = input().split()
+    if catalogue[size] > 0:
+        wallet += int(money)
+        catalogue[size] -= 1
+print(wallet)

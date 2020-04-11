@@ -1,0 +1,8 @@
+import itertools
+
+arr_1 = [int(_) for _ in input().split()]
+arr_2 = [int(_) for _ in input().split()]
+
+arr_3 = (list(itertools.product(arr_1, arr_2)))
+for item in arr_3:
+    print(item, end=" ")

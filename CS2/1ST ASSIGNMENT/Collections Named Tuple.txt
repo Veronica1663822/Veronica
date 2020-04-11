@@ -1,0 +1,8 @@
+import collections
+n = int(input())
+student = collections.namedtuple("Student", input().split())
+average = 0
+for _ in range(n):
+    candidate = student(*input().split())
+    average += int(candidate.MARKS)
+print(average / n)

@@ -1,0 +1,6 @@
+import itertools
+
+s = input()
+boh = itertools.groupby(s)
+for k, g in boh:
+    print("({}, {})".format(len(list(g)), k), end=" ")

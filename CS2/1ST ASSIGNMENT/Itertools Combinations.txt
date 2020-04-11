@@ -1,0 +1,8 @@
+import itertools
+s, l = input().split()
+for _ in range(1, int(l)+1):
+    list_def = []
+    for item in sorted(itertools.combinations(s, _)):
+        list_def.append(sorted(item))
+    for item in sorted(list_def):
+        print("".join(item))

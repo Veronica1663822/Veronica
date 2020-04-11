@@ -1,0 +1,19 @@
+def process_input():
+    _ = input() 
+    arr = list(map(int, input().split()))
+    s1 = set(map(int, input().split()))
+    s2 = set(map(int, input().split()))
+    return arr, s1, s2
+
+def calculate_happiness(arr, s1, s2):
+    happiness = 0
+    for n in arr:
+        if n in s1:
+            happiness += 1
+        elif n in s2:
+            happiness -= 1
+    return happiness
+
+if __name__ == "__main__":
+    arr, s1, s2 = process_input()
+    print(calculate_happiness(arr, s1, s2)) 

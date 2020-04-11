@@ -1,0 +1,8 @@
+n = int(input())
+set_1 = set(input().split(" "))
+m = int(input())
+set_2 = set(input().split(" "))
+
+symmetric_difference = [int(item) for item in (set_1 ^ set_2)]
+for value in sorted(symmetric_difference):
+    print(value)

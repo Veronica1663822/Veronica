@@ -1,0 +1,19 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def solve(s):
+    coded_string = ""
+    for i in range(len(s)):
+        if i == 0 or (s[i].isalpha() and s[i-1].isspace()):
+            coded_string += s[i].upper()
+        else:
+            coded_string += s[i]
+    return coded_string
+
+
+if __name__ == '__main__':

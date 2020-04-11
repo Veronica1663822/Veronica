@@ -1,0 +1,23 @@
+if __name__ == '__main__':
+    s = input()
+    isalnum = isalpha = isdigit = islower = isupper = False
+    for char in s:
+        if char.isalnum():
+            isalnum = True
+        if char.isalpha():
+            isalpha = True
+        if char.isdigit():
+            isdigit = True
+        if char.islower():
+            islower = True
+        if char.isupper():
+            isupper = True
+        if isalnum and isalpha and isdigit and isupper and islower:
+            break
+            
+            
+    print(isalnum) 
+    print(isalpha)
+    print(isdigit)
+    print(islower)
+    print(isupper)

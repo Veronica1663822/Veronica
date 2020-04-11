@@ -1,0 +1,5 @@
+_ = input()
+eng = set(map(int, input().split()))
+_ = input()
+fr = set(map(int, input().split()))
+print(len(eng.union(fr)))

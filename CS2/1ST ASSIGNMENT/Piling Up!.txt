@@ -1,0 +1,17 @@
+import collections
+
+t = int(input())
+for series in range(t):
+    _ = input()
+    list_ = collections.deque([int(number) for number in input().split()])
+    max_side = max(list_)
+    while list_:
+        if max_side >= list_[0] >= list_[-1]:
+            max_side = list_.popleft()
+        elif max_side >= list_[-1] >= list_[0]:
+            max_side = list_.pop()
+        else:
+            print("No")
+            break
+    else:
+        print("Yes")

@@ -1,0 +1,41 @@
+def print_rangoli(size):
+    c_count = 1
+    n = size
+    width = (2 * (size + size - 1)) - 1
+    turn = 0
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet = alphabet.lower()
+    for i in range(0, n):
+        line = []
+        check = n-1
+        for j in range(0, c_count):
+            line.append(alphabet[check])
+            if len(line) < c_count - turn:
+                check -= 1
+            else:
+                check += 1
+        line = "-".join(line)
+        print(line.center(width, "-"))
+        c_count += 2
+        turn += 1
+
+    c_count -= 4     
+    turn -= 2
+
+    for _ in range(0, n-1):
+        line = []
+        check = n - 1
+        for z in range(0, c_count):
+            line.append(alphabet[check])
+            if len(line) < c_count - turn:
+                check -= 1
+            else:
+                check += 1
+        line = "-".join(line)
+        print(line.center(width, "-"))
+        c_count -= 2
+        turn -= 1
+        
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)

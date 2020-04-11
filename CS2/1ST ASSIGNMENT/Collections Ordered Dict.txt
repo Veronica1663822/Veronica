@@ -1,0 +1,19 @@
+import collections
+
+n = int(input())
+sales = collections.OrderedDict()
+for _ in range(n):
+    item = []
+    acq = input().split()
+    for x in acq:
+        if x.isdigit():
+            price = int(x)
+        else:
+            item.append(x)
+    item = " ".join(item)
+    if item not in sales:
+        sales[item] = price
+    else:
+        sales[item] += price
+for item in sales:
+    print(item, sales[item])

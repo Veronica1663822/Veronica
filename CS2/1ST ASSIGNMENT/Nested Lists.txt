@@ -1,0 +1,21 @@
+def find_n_lowest(d, n):  
+    s = set(d.values())
+    for _ in range(n-1):
+        s.remove(min(s))
+    s_low = min(s)
+    names = [name for name in d.keys() if d[name] == s_low]
+    return names
+
+def process_input():
+    d = {}
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        d[name] = score
+    return d
+
+if __name__ == '__main__':
+    d = process_input()
+    names = find_n_lowest(d, 2)
+    for name in sorted(names):
+        print(name)

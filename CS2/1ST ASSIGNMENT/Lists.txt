@@ -1,0 +1,34 @@
+import sys
+
+if __name__ == '__main__':
+    N = int(input())
+    lista = []
+    numbers = []
+    
+    for line in sys.stdin:
+        
+        if len(line) < 3:
+            continue
+        
+        elements = line.split()
+        
+        if elements[0] == "insert":
+            lista.insert(int(elements[1]), int(elements[2]))
+        
+        if elements[0] == "print":
+            print(lista)
+         
+        if elements[0] == "remove":
+            lista.remove(int(elements[1]))
+            
+        if elements[0] == "append":
+            lista.append(int(elements[1]))
+        
+        if elements[0] == "sort":
+            lista.sort()
+            
+        if elements[0] == "reverse":
+            lista.reverse()
+            
+        if elements[0] == "pop":
+            lista.pop()

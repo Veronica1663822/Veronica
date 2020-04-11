@@ -1,0 +1,16 @@
+import collections
+d = collections.defaultdict(list)
+n, m = list(map(int, input().split()))
+for _ in range(n):
+    d["A"].append(input().strip("\n"))
+for _ in range(m):
+    d["B"].append(input().strip("\n"))
+    
+for letter in d["B"]:
+    if letter not in d["A"]:
+        print(-1)
+        continue
+    for i in range(len(d["A"])):
+        if letter == d["A"][i]:
+            print(i + 1, end=" ")
+    print("")

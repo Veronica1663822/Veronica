@@ -1,0 +1,12 @@
+import itertools
+
+_ = input()
+counter = 0
+arr = input().split()
+length = int(input())
+
+list__ = list(itertools.combinations(arr, length))
+for item in list__:
+    if "a" in item:
+        counter += 1
+print(counter / len(list__))
