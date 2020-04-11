@@ -1,0 +1,10 @@
+def runner_up_finder(arr):
+    s = set(arr)
+    s.remove(max(s))
+    return(max(s))
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    print(runner_up_finder(arr))
