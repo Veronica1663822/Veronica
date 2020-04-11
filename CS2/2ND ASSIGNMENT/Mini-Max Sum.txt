@@ -1,0 +1,14 @@
+import sys
+
+arr = list(map(int, input().strip().split(' ')))
+max_sum = 0
+sum_all = sum(arr)
+min_sum = sum_all
+for number in arr:
+    sum_temp = sum_all - number
+    if sum_temp < min_sum:
+        min_sum = sum_temp
+    if sum_temp > max_sum:
+        max_sum = sum_temp
+        
+print(min_sum, max_sum)

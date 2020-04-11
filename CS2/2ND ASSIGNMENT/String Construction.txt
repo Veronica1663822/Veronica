@@ -1,0 +1,17 @@
+import sys
+
+def stringConstruction(s):
+    p = []
+    counter = 0
+    for char in s:
+        if char not in p:
+            counter += 1
+        p.append(char)
+    return counter
+
+if __name__ == "__main__":
+    q = int(input().strip())
+    for a0 in range(q):
+        s = input().strip()
+        result = stringConstruction(s)
+        print(result)

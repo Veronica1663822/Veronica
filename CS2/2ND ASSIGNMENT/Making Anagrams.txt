@@ -1,0 +1,15 @@
+import sys
+
+def makingAnagrams(s_1, s_2):
+    counter = 0
+    temp = s_1 + s_2
+    for char in s_1:
+        if char in s_2:
+            s_2.remove(char)
+            counter += 2
+    return len(temp) - counter
+
+s1 = input().strip()
+s2 = input().strip()
+result = makingAnagrams(list(s1), list(s2))
+print(result)

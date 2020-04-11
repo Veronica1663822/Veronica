@@ -1,0 +1,13 @@
+import sys
+
+n = int(input().strip())
+a = []
+b = []
+for a_i in range(0, n):
+    a_t = [int(a_temp) for a_temp in input().strip().split(' ')]
+    a.append(a_t[a_i])
+    b.append(a_t[n - 1 - a_i])
+result = (sum(a) - sum(b))
+if result < 0:
+    result *= -1
+print(result)

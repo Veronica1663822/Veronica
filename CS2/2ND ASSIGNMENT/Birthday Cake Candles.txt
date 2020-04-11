@@ -1,0 +1,15 @@
+import sys
+
+def birthdayCakeCandles(n, ar):
+    max_height = max(ar)
+    candle_number = 0
+    for candle in ar:
+        if candle >= max_height:
+            candle_number += 1
+    return candle_number
+        
+
+n = int(input().strip())
+ar = list(map(int, input().strip().split(' ')))
+result = birthdayCakeCandles(n, ar)
+print(result)

@@ -1,0 +1,23 @@
+import sys
+
+def timeConversion(s):
+    hour = int(s[0:2])
+    if "AM" in s:
+        if hour == 12:
+            hour -= 12
+            s_1 = str(hour) + "0" + s[2:8]
+            return s_1
+        else:
+            return s[:8]
+    else:
+        if hour == 12:
+            return s[:8]
+        else:
+            hour += 12
+            s_1 = str(hour) + s[2:8]
+            return s_1
+
+s = input().strip()
+result = timeConversion(s)
+print(result)
+

@@ -1,0 +1,36 @@
+
+
+import math
+import os
+import random
+import re
+import sys
+
+def closestNumbers(arr):
+    min_diff = float("inf")
+    srt_arr = sorted(arr)
+    for i in range(len(srt_arr)-1):
+        a = srt_arr[i+1]
+        b = srt_arr[i]
+        diff = abs(a-b)
+        if diff < min_diff:
+            min_diff = diff
+            result = [a, b]
+        elif diff == min_diff:
+            result += [a, b]
+    return sorted(result)
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    result = closestNumbers(arr)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
